@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fairyanmusicschool.com'),
   title: 'Fairyan Music School | Premium Music Classes — Guitar, Piano, Vocals & More',
   description: 'Join Fairyan Music School — 25 years of excellence. Classes for all ages in guitar, piano, drums, violin & vocals. Max 8 students per batch. Book a free trial.',
   keywords: ['music classes', 'guitar lessons', 'piano classes', 'music school', 'Fairyan', 'music education'],
