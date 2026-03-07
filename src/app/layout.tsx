@@ -20,9 +20,13 @@ export const metadata: Metadata = {
     images: ['/fairyan-favicon.svg'],
   },
   icons: {
-    icon: '/fairyan-favicon.svg',
-    shortcut: '/fairyan-favicon.svg',
-    apple: '/fairyan-favicon.svg',
+    icon: [
+      { url: '/fairyan-favicon.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: ['/fairyan-favicon.svg'],
+    apple: [
+      { url: '/fairyan-favicon.svg' }
+    ],
   },
   robots: { index: true, follow: true },
 };
