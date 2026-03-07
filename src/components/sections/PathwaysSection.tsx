@@ -64,7 +64,7 @@ export default function PathwaysSection() {
                             key={card.title}
                             variants={scaleIn}
                             whileHover={{ y: -4 }}
-                            className="group relative overflow-hidden rounded-3xl transition-all duration-300"
+                            className="group relative overflow-hidden rounded-3xl transition-colors duration-300"
                             style={{
                                 background: 'var(--color-surface-2)',
                                 border: '1px solid rgba(212,175,55,0.15)',

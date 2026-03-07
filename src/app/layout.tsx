@@ -12,12 +12,17 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Fairyan Music School',
     description: '25 years of musical excellence. Personalized instruction for students of all ages.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/fairyan-favicon.svg', width: 800, height: 800 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fairyan Music School',
-    images: ['/og-image.jpg'],
+    images: ['/fairyan-favicon.svg'],
+  },
+  icons: {
+    icon: '/fairyan-favicon.svg',
+    shortcut: '/fairyan-favicon.svg',
+    apple: '/fairyan-favicon.svg',
   },
   robots: { index: true, follow: true },
 };

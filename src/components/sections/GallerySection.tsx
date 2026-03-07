@@ -66,7 +66,7 @@ export default function GallerySection() {
                             key={`${video.title}-${i}`}
                             variants={scaleIn}
                             whileHover={{ y: -4 }}
-                            className="group relative cursor-pointer overflow-hidden rounded-lg transition-all duration-300"
+                            className="group relative cursor-pointer overflow-hidden rounded-lg transition-colors duration-300"
                             style={{ border: '1px solid rgba(212,175,55,0.12)' }}
                         >
                             <div className="relative aspect-video overflow-hidden">
