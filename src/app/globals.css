@@ -1,26 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-success: #6FDDB0;
+  --color-warning: #FF9F6B;
+  --color-error: #FF7B6B;
+  --color-whatsapp: #25D366;
+
+  /* ---- Fonts ---- */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-heading: 'Cormorant SC', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-ui: 'Barlow Condensed', sans-serif;
+
+  /* ---- Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---- Animations ---- */
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.5s ease both;
+  --animate-gold-line: gold-line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2.5s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* LIGHT THEME (Premium Pearl/Gold style) */
+  --color-surface-1: #FAFAFA;
+  --color-surface-2: #FFFFFF;
+  --color-surface-3: #F4F4F4;
+
+  --color-midnight: #FDFBF7;
+  /* Maps the old dark background to light pearl */
+  --color-midnight-80: rgba(253, 251, 247, 0.85);
+  --color-midnight-40: rgba(253, 251, 247, 0.40);
+
+  --color-obsidian: #FFFFFF;
+
+  --color-pearl: #1A1A1A;
+  /* Maps the old white text to dark charcoal */
+  --color-pearl-90: rgba(26, 26, 26, 0.90);
+  --color-pearl-40: rgba(26, 26, 26, 0.50);
+  --color-pearl-10: rgba(0, 0, 0, 0.04);
+
+  --color-gold: #B8860B;
+  /* Darker, richer gold for readability on light bg */
+  --color-gold-light: #D4AF37;
+  --color-gold-dim: rgba(184, 134, 11, 0.12);
+  --color-gold-glow: rgba(184, 134, 11, 0.25);
+
+  --color-mid-line: rgba(0, 0, 0, 0.08);
+  --color-text-muted: #828282;
+  --color-text-sub: #4A4A4A;
+
+  --shadow-gold: 0 0 40px rgba(184, 134, 11, 0.15);
+  --shadow-gold-hover: 0 8px 32px rgba(184, 134, 11, 0.25);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.05);
+
+  --nav-bg: rgba(255, 255, 255, 0.85);
+}
+
+.dark {
+  /* DARK THEME (Refined Obsidian/Charcoal - NOT deep blue) */
+  --color-surface-1: #0A0A0A;
+  --color-surface-2: #141414;
+  --color-surface-3: #1A1A1A;
+
+  --color-midnight: #0A0A0A;
+  --color-midnight-80: rgba(10, 10, 10, 0.85);
+  --color-midnight-40: rgba(10, 10, 10, 0.40);
+
+  --color-obsidian: #000000;
+
+  --color-pearl: #FDFBF7;
+  --color-pearl-90: rgba(253, 251, 247, 0.90);
+  --color-pearl-40: rgba(253, 251, 247, 0.40);
+  --color-pearl-10: rgba(253, 251, 247, 0.08);
+
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8CC6A;
+  --color-gold-dim: rgba(212, 175, 55, 0.15);
+  --color-gold-glow: rgba(212, 175, 55, 0.25);
+
+  --color-mid-line: rgba(255, 255, 255, 0.08);
+  --color-text-muted: rgba(255, 255, 255, 0.50);
+  --color-text-sub: rgba(255, 255, 255, 0.70);
+
+  --shadow-gold: 0 0 40px rgba(212, 175, 55, 0.15);
+  --shadow-gold-hover: 0 8px 32px rgba(212, 175, 55, 0.35);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.50);
+
+  --nav-bg: rgba(10, 10, 10, 0.85);
+}
+
+/* ---- Keyframes ---- */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gold-line-grow {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 64px;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--color-gold-dim);
+  }
+
+  50% {
+    box-shadow: 0 0 40px var(--color-gold-glow);
+  }
+}
+
+/* ---- Global Styles ---- */
+html {
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface-1);
+  color: var(--color-pearl);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Elegant radial noise texture for premium glassmorphism feel */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background: radial-gradient(circle at 50% 0%, var(--color-gold-dim), transparent 60%);
+  z-index: -1;
+  transition: opacity 0.4s;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px;
+  z-index: 9999;
+}
+
+img {
+  filter: var(--img-filter, none);
+  transition: filter 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root .logo-adaptive {
+  filter: invert(1) brightness(0.1);
+}
+
+.dark .logo-adaptive {
+  filter: none;
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Custom scrollbar ---- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dim);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
 }
