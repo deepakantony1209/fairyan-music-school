@@ -67,7 +67,7 @@ export default function SummerSection() {
             <div className="pointer-events-none absolute -right-[60px] -top-[60px] h-[200px] w-[200px] rounded-full" style={{ background: 'radial-gradient(circle, var(--color-gold-dim), transparent 70%)' }} />
 
             <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mb-4 flex items-center gap-3">
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-4 flex items-center gap-3">
                     <span className="inline-block h-px w-6" style={{ background: 'var(--color-gold)' }} />
                     <span style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-gold)' }}>
                         {SUMMER.tag}
@@ -79,18 +79,18 @@ export default function SummerSection() {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 3.5vw, 42px)', fontWeight: 700, color: 'var(--color-text-main)', lineHeight: 1.1, marginBottom: '16px' }}
                 >
                     Summer <em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>Intensives</em> 2026
                 </motion.h2>
 
-                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mb-8 max-w-lg" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.7 }}>
+                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-8 max-w-lg" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.7 }}>
                     {SUMMER.subtitle}
                 </motion.p>
 
                 {/* Countdown */}
-                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mb-10">
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-10">
                     <CountdownTimer targetDate="2026-06-01T00:00:00" />
                 </motion.div>
 
@@ -99,7 +99,7 @@ export default function SummerSection() {
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="grid gap-6 md:grid-cols-2"
                 >
                     {SUMMER.cards.map((card) => (
@@ -161,7 +161,7 @@ export default function SummerSection() {
                     ))}
                 </motion.div>
 
-                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mt-6" style={{ fontFamily: 'var(--font-ui)', fontSize: '12px', color: 'var(--color-text-muted)', letterSpacing: '0.08em' }}>
+                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mt-6" style={{ fontFamily: 'var(--font-ui)', fontSize: '12px', color: 'var(--color-text-muted)', letterSpacing: '0.08em' }}>
                     {SUMMER.note}
                 </motion.p>
             </div>

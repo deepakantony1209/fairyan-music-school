@@ -9,7 +9,7 @@ export default function DirectorSection() {
     return (
         <section id="director" aria-labelledby="director-title" className="relative py-24 md:py-32" style={{ borderTop: '1px solid var(--color-mid-line)' }}>
             <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mb-4 flex items-center gap-3">
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-4 flex items-center gap-3">
                     <span className="inline-block h-px w-6" style={{ background: 'var(--color-gold)' }} />
                     <span style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-gold)' }}>
                         {DIRECTOR.tag}
@@ -22,7 +22,7 @@ export default function DirectorSection() {
                         variants={slideLeft}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: '-80px' }}
+                        viewport={{ once: true, amount: 0.1 }}
                         className="relative overflow-hidden rounded-2xl"
                     >
                         <img
@@ -40,7 +40,7 @@ export default function DirectorSection() {
                         variants={slideRight}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: '-80px' }}
+                        viewport={{ once: true, amount: 0.1 }}
                     >
                         <h2
                             id="director-title"

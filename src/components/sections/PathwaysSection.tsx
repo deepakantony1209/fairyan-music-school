@@ -20,7 +20,7 @@ export default function PathwaysSection() {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="mb-4 flex items-center gap-3"
                 >
                     <span className="inline-block h-px w-6" style={{ background: 'var(--color-gold)' }} />
@@ -34,7 +34,7 @@ export default function PathwaysSection() {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 500, letterSpacing: '0.04em', color: 'var(--color-pearl)', lineHeight: 1.2, marginBottom: '16px' }}
                 >
                     {PATHWAYS.title}
@@ -44,7 +44,7 @@ export default function PathwaysSection() {
                     variants={fadeUp}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="mb-12 max-w-xl"
                     style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.8 }}
                 >
@@ -56,7 +56,7 @@ export default function PathwaysSection() {
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
                 >
                     {PATHWAYS.cards.map((card) => (

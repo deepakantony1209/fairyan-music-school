@@ -9,18 +9,18 @@ export default function InstrumentsSection() {
     return (
         <section id="instruments" aria-labelledby="instruments-title" className="relative py-24 md:py-32" style={{ borderTop: '1px solid var(--color-mid-line)' }}>
             <div className="mx-auto max-w-[1280px] px-6 md:px-12">
-                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mb-4 flex items-center gap-3">
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-4 flex items-center gap-3">
                     <span className="inline-block h-px w-6" style={{ background: 'var(--color-gold)' }} />
                     <span style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-gold)' }}>
                         {INSTRUMENTS.tag}
                     </span>
                 </motion.div>
 
-                <motion.h2 id="instruments-title" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 500, letterSpacing: '0.04em', color: 'var(--color-pearl)', lineHeight: 1.2, marginBottom: '16px' }}>
+                <motion.h2 id="instruments-title" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 500, letterSpacing: '0.04em', color: 'var(--color-pearl)', lineHeight: 1.2, marginBottom: '16px' }}>
                     {INSTRUMENTS.title}
                 </motion.h2>
 
-                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="mb-12 max-w-xl" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.8 }}>
+                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-12 max-w-xl" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.8 }}>
                     {INSTRUMENTS.subtitle}
                 </motion.p>
 
@@ -28,7 +28,7 @@ export default function InstrumentsSection() {
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: '-80px' }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
                 >
                     {instruments.map((instr) => (
