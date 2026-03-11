@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { INSTRUMENTS } from '@/data/content';
 import { instruments } from '@/data/instruments';
@@ -41,11 +42,14 @@ export default function InstrumentsSection() {
                         >
                             {/* Instrument Image */}
                             <div className="relative aspect-[4/3] overflow-hidden">
-                                <img
+                                <Image
                                     src={instr.image}
                                     alt={instr.name}
-                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 50vw, 33vw"
                                     loading="lazy"
+                                    quality={75}
                                 />
                                 {/* Gradient overlay */}
                                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, var(--color-surface-2) 0%, transparent 60%)' }} />

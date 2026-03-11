@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import TestimonialCarousel from '@/components/ui/TestimonialCarousel';
 import { EXPERIENCE } from '@/data/content';
@@ -50,11 +51,14 @@ export default function ExperienceSection() {
                         >
                             {/* Image */}
                             <div className="relative h-44 overflow-hidden">
-                                <img
-                                    src={pillarImages[pillar.title]}
+                                <Image
+                                    src={pillarImages[pillar.title] ?? '/trinity-fairyan.jpg'}
                                     alt={pillar.title}
-                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     loading="lazy"
+                                    quality={75}
                                 />
                                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, var(--color-surface-2) 0%, transparent 70%)' }} />
                             </div>

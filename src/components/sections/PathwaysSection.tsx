@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight } from '@phosphor-icons/react';
 import { PATHWAYS } from '@/data/content';
@@ -75,11 +76,14 @@ export default function PathwaysSection() {
 
                             {/* Image */}
                             <div className="relative h-48 overflow-hidden">
-                                <img
-                                    src={pathwayImages[card.title]}
+                                <Image
+                                    src={pathwayImages[card.title] ?? ''}
                                     alt={card.title}
-                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
                                     loading="lazy"
+                                    quality={75}
                                 />
                                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, var(--color-surface-2) 5%, transparent 70%)' }} />
                             </div>

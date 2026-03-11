@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, ArrowDown } from '@phosphor-icons/react';
+import { ArrowRight } from '@phosphor-icons/react';
 import { HERO } from '@/data/content';
 import { fadeUp, staggerContainer, staggerChild } from '@/lib/motion';
 
@@ -13,12 +14,15 @@ export default function HeroSection() {
             className="dark relative flex min-h-screen items-center overflow-hidden"
             style={{ background: 'var(--color-surface-1)' }}
         >
-            {/* Background image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1920&h=1080&fit=crop')`,
-                }}
+            {/* Background image — LCP priority */}
+            <Image
+                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1920&h=1080&fit=crop"
+                alt=""
+                fill
+                priority
+                className="object-cover object-center"
+                sizes="100vw"
+                quality={80}
             />
             {/* Gradient overlay */}
             <div
