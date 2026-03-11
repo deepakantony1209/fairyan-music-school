@@ -22,7 +22,7 @@ export default function HeroSection() {
                 priority
                 className="object-cover object-center"
                 sizes="100vw"
-                quality={80}
+                quality={55}
             />
             {/* Gradient overlay */}
             <div
