@@ -45,8 +45,8 @@ export default function Footer() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="flex items-center gap-2 no-underline opacity-70 transition-all hover:opacity-100 hover:translate-x-1"
-                                style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}
+                                className="flex items-center gap-2 no-underline transition-all hover:translate-x-1"
+                                style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'rgba(253,251,247,0.85)' }}
                             >
                                 <span style={{ color: 'var(--color-gold)', fontSize: '10px' }}>✦</span>
                                 {link.label}
@@ -61,19 +61,19 @@ export default function Footer() {
                         Contact
                     </div>
                     <div className="flex flex-col gap-3">
-                        <a href={FOOTER.mapsLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 no-underline opacity-80 transition-opacity hover:opacity-100" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}>
+                        <a href={FOOTER.mapsLink} target="_blank" rel="noopener noreferrer" aria-label="View on Google Maps" className="flex items-start gap-3 no-underline transition-opacity hover:opacity-80" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'rgba(253,251,247,0.85)' }}>
                             <MapPin size={16} color="var(--color-gold)" className="mt-0.5 shrink-0" />
                             <span className="leading-snug">{FOOTER.address}</span>
                         </a>
-                        <a href={`tel:${FOOTER.phone}`} className="flex items-center gap-3 no-underline opacity-80 transition-opacity hover:opacity-100" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}>
+                        <a href={`tel:${FOOTER.phone}`} className="flex items-center gap-3 no-underline transition-opacity hover:opacity-80" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'rgba(253,251,247,0.85)' }}>
                             <Phone size={16} color="var(--color-gold)" />
                             {FOOTER.phone}
                         </a>
-                        <a href={`mailto:${FOOTER.email}`} className="flex items-center gap-3 no-underline opacity-80 transition-opacity hover:opacity-100" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}>
+                        <a href={`mailto:${FOOTER.email}`} className="flex items-center gap-3 no-underline transition-opacity hover:opacity-80" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'rgba(253,251,247,0.85)' }}>
                             <EnvelopeSimple size={16} color="var(--color-gold)" />
                             {FOOTER.email}
                         </a>
-                        <div className="flex items-start gap-3" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}>
+                        <div className="flex items-start gap-3" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'rgba(253,251,247,0.85)' }}>
                             <Clock size={16} color="var(--color-gold)" className="mt-0.5" />
                             <span>{FOOTER.schedule}</span>
                         </div>
@@ -110,8 +110,8 @@ export default function Footer() {
                 className="border-t px-6 py-4 text-center md:px-12"
                 style={{ borderColor: 'var(--color-mid-line)' }}
             >
-                <p style={{ fontFamily: 'var(--font-ui)', fontSize: '12px', color: 'var(--color-text-muted)', letterSpacing: '0.08em' }}>
-                    {FOOTER.copyright} &middot; <a href="#" className="no-underline opacity-80 transition-opacity hover:opacity-100" style={{ color: 'var(--color-text-muted)' }}>Privacy Policy</a>
+                <p style={{ fontFamily: 'var(--font-ui)', fontSize: '12px', color: 'rgba(253,251,247,0.6)', letterSpacing: '0.08em' }}>
+                    {FOOTER.copyright} &middot; <a href="#" className="transition-opacity hover:opacity-100" style={{ color: 'rgba(253,251,247,0.6)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Privacy Policy</a>
                 </p>
             </div>
         </footer>

@@ -132,6 +132,7 @@ export default function Navbar() {
                         {mounted && (
                             <button
                                 onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+                                aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
                                 className="cursor-pointer border-none bg-transparent flex items-center justify-center p-2 rounded-full transition-colors"
                             >
                                 {resolvedTheme === 'dark' ? (
