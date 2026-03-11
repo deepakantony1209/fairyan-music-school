@@ -37,7 +37,7 @@ export default function Footer() {
 
                 {/* Quick Links */}
                 <div>
-                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '16px' }}>
+                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FDFBF7', marginBottom: '16px' }}>
                         Our Classes
                     </div>
                     <div className="flex flex-col gap-3">
@@ -57,7 +57,7 @@ export default function Footer() {
 
                 {/* Contact */}
                 <div>
-                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '16px' }}>
+                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FDFBF7', marginBottom: '16px' }}>
                         Contact
                     </div>
                     <div className="flex flex-col gap-3">
@@ -82,7 +82,7 @@ export default function Footer() {
 
                 {/* Quick Contact */}
                 <div>
-                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '16px' }}>
+                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FDFBF7', marginBottom: '16px' }}>
                         Quick Contact
                     </div>
                     <a
@@ -92,10 +92,10 @@ export default function Footer() {
                         className="inline-flex items-center gap-2 rounded-full px-4 py-2 no-underline transition-all hover:-translate-y-0.5"
                         style={{
                             background: 'var(--color-whatsapp)',
-                            color: 'white',
+                            color: '#0A2F14',
                             fontFamily: 'var(--font-ui)',
                             fontSize: '12px',
-                            fontWeight: 600,
+                            fontWeight: 700,
                             letterSpacing: '0.08em',
                         }}
                     >
