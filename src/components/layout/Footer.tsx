@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { YoutubeLogo, InstagramLogo, FacebookLogo, WhatsappLogo, Phone, EnvelopeSimple, MapPin, Clock } from '@phosphor-icons/react';
 import { FOOTER } from '@/data/content';
 
@@ -17,7 +18,7 @@ export default function Footer() {
                         className="mb-4 h-10 w-auto logo-adaptive"
                     />
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-text-sub)', lineHeight: 1.7 }}>
-                        Premium music education for all ages. Building musicians since 2001.
+                        Premium music education for all ages — in-centre, online, and at your home. Building musicians since 2001.
                     </p>
                     <div className="mt-4 flex gap-3">
                         <a href={FOOTER.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="opacity-60 transition-opacity hover:opacity-100">
@@ -29,6 +30,26 @@ export default function Footer() {
                         <a href={FOOTER.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="opacity-60 transition-opacity hover:opacity-100">
                             <FacebookLogo size={22} color="var(--color-pearl)" />
                         </a>
+                    </div>
+                </div>
+
+                {/* Quick Links */}
+                <div>
+                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '16px' }}>
+                        Our Classes
+                    </div>
+                    <div className="flex flex-col gap-3">
+                        {FOOTER.quickLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="flex items-center gap-2 no-underline opacity-70 transition-all hover:opacity-100 hover:translate-x-1"
+                                style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}
+                            >
+                                <span style={{ color: 'var(--color-gold)', fontSize: '10px' }}>✦</span>
+                                {link.label}
+                            </Link>
+                        ))}
                     </div>
                 </div>
 
@@ -50,21 +71,14 @@ export default function Footer() {
                             <EnvelopeSimple size={16} color="var(--color-gold)" />
                             {FOOTER.email}
                         </a>
+                        <div className="flex items-start gap-3" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}>
+                            <Clock size={16} color="var(--color-gold)" className="mt-0.5" />
+                            <span>{FOOTER.schedule}</span>
+                        </div>
                     </div>
                 </div>
 
-                {/* Schedule */}
-                <div>
-                    <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '16px' }}>
-                        Batch Timings
-                    </div>
-                    <div className="flex items-start gap-3" style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-text-sub)' }}>
-                        <Clock size={16} color="var(--color-gold)" className="mt-0.5" />
-                        <span>{FOOTER.schedule}</span>
-                    </div>
-                </div>
-
-                {/* Quick Links */}
+                {/* Quick Contact */}
                 <div>
                     <div style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '16px' }}>
                         Quick Contact

@@ -13,10 +13,10 @@ export const NAV = {
 
 export const HERO = {
     headline: 'Where Music Becomes a Lifelong Story',
-    subheadline: 'From your first chord to your first stage — personalized music lessons for every student.',
+    subheadline: 'From your first chord to your first stage — personalized keyboard, guitar, and violin lessons for every student, in-centre or online.',
     ctaPrimary: 'Book a Free Trial Lesson',
     ctaSecondary: 'Explore Programs',
-    badges: ['25+ Years of Teaching'],
+    badges: ['25+ Years of Teaching', 'Trinity London Qualified'],
 } as const;
 
 export const PATHWAYS = {
@@ -28,14 +28,14 @@ export const PATHWAYS = {
             icon: '🎵',
             age: '9–15 years',
             title: 'Juniors & Teens',
-            description: 'Structured lessons that develop technique, reading skills, and the confidence to perform on stage. Parents see real progress.',
+            description: 'Structured lessons that develop technique, reading skills, and the confidence to perform on stage. Parents see real progress — and grade certifications to prove it.',
             cta: 'Start Their Journey',
         },
         {
             icon: '🎸',
             age: '16–40 years',
             title: 'Adults & Professionals',
-            description: 'Small batches, flexible timing, and real goals — whether it\'s stress relief, band performance, or mastering a new instrument.',
+            description: 'Small batches, flexible timing, and real goals — whether it\'s stress relief, a personal milestone, or preparing for a Trinity grade exam.',
             cta: 'Book a Trial',
         },
         {
@@ -51,7 +51,7 @@ export const PATHWAYS = {
 export const INSTRUMENTS = {
     tag: 'WHAT WE TEACH',
     title: 'Choose Your Instrument',
-    subtitle: 'Eight disciplines. One standard of excellence. Every student gets a clear path from beginner to performance-ready.',
+    subtitle: 'Three instruments. One standard of excellence. Every student gets a clear path from beginner to performance-ready — with Trinity London grade certification available.',
 } as const;
 
 export const PROGRAMS = {
@@ -65,21 +65,23 @@ export const PROGRAMS = {
 export const SUMMER = {
     tag: 'SEASONAL PROGRAMS',
     title: 'Summer Intensives 2026',
-    subtitle: 'Accelerated programs designed to take you from beginner to performing in weeks, not months.',
-    note: 'Returning Fairyan students get priority enrollment. Limited spots — register early.',
+    subtitle: 'Make your child\'s vacation musical. Our Summer Intensives 2026 begin on April 17 — accelerated programs designed to take students from beginner to performing in weeks, not months.',
+    startDate: 'April 17, 2026',
+    parentHook: 'Give your child a head start this summer. Limited seats — enroll before they\'re gone.',
+    note: 'Summer 2026 classes begin April 17. Returning Fairyan students get priority enrollment. Limited spots — register early.',
     cards: [
         {
             days: 15,
             title: 'Summer Starter',
             idealFor: 'Beginners & Teens',
-            description: 'Go from zero experience to performing your first full song. Daily sessions covering fundamentals, practice habits, and stage readiness.',
+            description: 'Go from zero experience to performing your first full song. Daily sessions covering fundamentals, practice habits, and stage readiness. Perfect for kids making their summer count.',
             cta: 'Claim Your Spot',
         },
         {
             days: 25,
             title: 'Summer Deep Dive',
             idealFor: 'Intermediate Learners',
-            description: 'Push past plateaus. Advanced technique, recording a track in-studio, and a live performance at the end of the program.',
+            description: 'Push past plateaus. Advanced technique, music theory, and a live performance at the end of the program. Available for both in-centre and online students.',
             cta: 'Reserve My Place',
         },
     ],
@@ -91,6 +93,11 @@ export const EXPERIENCE = {
     subtitle: 'Fairyan isn\'t just a place to learn music. It\'s where musicians are made.',
     pillars: [
         {
+            icon: '🎓',
+            title: 'Trinity London Grade Exams',
+            description: 'Fairyan is led by a qualified Trinity College London instructor. We prepare students for internationally recognised grade examinations from Grade 1 through Grade 8.',
+        },
+        {
             icon: '🎤',
             title: 'Student Bands',
             description: 'Students don\'t just learn alone. We form collaborative bands that rehearse together and perform live — a rare experience you won\'t find at most music schools.',
@@ -99,11 +106,6 @@ export const EXPERIENCE = {
             icon: '🎭',
             title: 'Live Events',
             description: 'From cultural festivals to school showcases, our students perform on real stages in front of real audiences. Stage experience is part of the curriculum.',
-        },
-        {
-            icon: '📱',
-            title: 'Digital Portfolio',
-            description: 'Every student builds a public YouTube and Instagram portfolio of their progress. For teens and adults, this becomes a living record of growth.',
         },
         {
             icon: '🤝',
@@ -118,58 +120,58 @@ export const EXPERIENCE = {
             role: 'Adult Learner',
         },
         {
-            text: 'I\'ve been learning piano here for 2 years. The batches are small, and the instructors give you so much personal attention.',
+            text: 'The online classes are just as good as in-person. My son learns keyboard from home and the instructor gives him full attention every session.',
             author: 'Karthik S.',
-            role: 'Piano Student',
+            role: 'Keyboard Student (Online)',
         },
         {
-            text: 'My son started when he was 9. Now he\'s playing in his own school band. The way they teach theory combined with practical playing is incredible.',
+            text: 'My son started when he was 9. Now he\'s preparing for his Trinity Grade 4 exam. The way they teach theory combined with practical playing is incredible.',
             author: 'Anita M.',
             role: 'Parent',
         },
         {
-            text: 'I joined the summer intensive for vocals and learned more in 25 days than I did in an entire year on YouTube. Highly recommend!',
+            text: 'I joined the summer intensive and learned more in 15 days than I did in an entire year on YouTube. Highly recommend!',
             author: 'Rohan V.',
-            role: 'Vocals',
+            role: 'Guitar Student',
         },
         {
-            text: 'Fairyan isn\'t just a school, it\'s a community. Playing at the live events has completely removed my stage fright.',
+            text: 'Fairyan isn\'t just a school, it\'s a community. Passed my Trinity Grade 5 violin exam last month — couldn\'t have done it without Noel sir.',
             author: 'Meera K.',
-            role: 'Guitar & Vocals',
-        }
+            role: 'Violin Student',
+        },
     ],
 } as const;
 
 export const GALLERY = {
     tag: 'SEE OUR STUDENTS IN ACTION',
     title: 'Showcase',
-    subtitle: 'Performances, recitals, and student bands — watch what happens when practice meets the stage.',
+    subtitle: 'Performances, recitals, and student milestones — watch what happens when practice meets the stage.',
     ctaLabel: 'Watch More on YouTube',
     ctaUrl: '#',
-    filters: ['All', 'Guitar', 'Piano', 'Vocals', 'Drums', 'Band'],
+    filters: ['All', 'Guitar', 'Keyboard', 'Violin'],
 } as const;
 
 export const DIRECTOR = {
     tag: 'THE PERSON BEHIND THE MUSIC',
     title: 'Meet Noel Jayakumar',
-    subtitle: 'Founder & Director — 25+ Years of Music Education',
+    subtitle: 'Founder & Director · 25+ Years · Qualified Trinity College London Instructor',
     bio: [
         'Noel Jayakumar founded Fairyan Music School over 25 years ago with one belief: every person, regardless of age, can learn to play music well.',
-        'Since then, he has personally trained hundreds of students across guitar, keyboard, drums, and vocals. His teaching philosophy is simple — learn by doing. Students don\'t just practice scales in isolation. They perform, record, and collaborate from the very first month.',
-        'Noel is a multi-instrumentalist who leads every batch personally. He believes small class sizes (never more than 8) are non-negotiable, because real progress requires real attention.',
+        'Since then, he has personally trained hundreds of students across keyboard, guitar, and violin. As a qualified Trinity College London instructor, Noel prepares students for internationally recognised grade examinations — from Grade 1 through Grade 8. His teaching philosophy is simple — learn by doing. Students don\'t just practice scales in isolation. They perform, record, and collaborate from the very first month.',
+        'Noel conducts both in-centre and live online classes, bringing the same depth of personal attention to every student — wherever they are. He believes small class sizes (never more than 8) are non-negotiable, because real progress requires real attention.',
     ],
     quote: 'Every student deserves to hear themselves improve. That\'s the moment music becomes personal.',
     stats: [
         { value: '25+', label: 'Years Experience' },
         { value: '500+', label: 'Students Trained' },
-        { value: '8', label: 'Instruments Taught' },
+        { value: '3', label: 'Instruments Taught' },
     ],
 } as const;
 
 export const ENROLL = {
     tag: 'START YOUR JOURNEY',
     title: 'Book a Free Trial Lesson',
-    subtitle: 'Fill out the form below. We\'ll call you within 24 hours to schedule your first session.',
+    subtitle: 'Fill out the form below. We\'ll call you within 24 hours to schedule your first session — online or in-centre.',
     successMessage: 'Thank you! We\'ll call you within 24 hours to schedule your free trial lesson.',
 } as const;
 
@@ -180,6 +182,12 @@ export const FOOTER = {
     email: 'info@fairyanmusicschool.com',
     schedule: '5:30 PM | 6:30 PM | 7:30 PM',
     copyright: `© ${new Date().getFullYear()} Fairyan Music School`,
+    quickLinks: [
+        { label: 'Online Classes', href: '/online-classes' },
+        { label: 'Centre Classes', href: '/centre-classes' },
+        { label: 'Home Tuition', href: '/home-tuition' },
+        { label: 'Enroll Now', href: '/#enroll' },
+    ],
     social: {
         youtube: '#',
         instagram: '#',

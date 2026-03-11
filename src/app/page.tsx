@@ -4,6 +4,7 @@ import WhatsAppFloat from '@/components/layout/WhatsAppFloat';
 import HeroSection from '@/components/sections/HeroSection';
 import PathwaysSection from '@/components/sections/PathwaysSection';
 import InstrumentsSection from '@/components/sections/InstrumentsSection';
+import ClassesSection from '@/components/sections/ClassesSection';
 import SummerSection from '@/components/sections/SummerSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import GallerySection from '@/components/sections/GallerySection';
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <PathwaysSection />
         <InstrumentsSection />
+        <ClassesSection />
         <SummerSection />
         <ExperienceSection />
         <GallerySection />

@@ -29,7 +29,7 @@ export default function InstrumentsSection() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
-                    className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
+                    className="grid grid-cols-1 gap-6 md:grid-cols-3"
                 >
                     {instruments.map((instr) => (
                         <motion.div
@@ -52,11 +52,11 @@ export default function InstrumentsSection() {
                             </div>
 
                             {/* Text */}
-                            <div className="px-4 pb-5 pt-2">
-                                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '12px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--color-pearl)', marginBottom: '6px' }}>
+                            <div className="px-5 pb-6 pt-3">
+                                <div style={{ fontFamily: 'var(--font-ui)', fontSize: '12px', fontWeight: 600, letterSpacing: '0.10em', textTransform: 'uppercase', color: 'var(--color-pearl)', marginBottom: '8px' }}>
                                     {instr.name}
                                 </div>
-                                <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', fontStyle: 'italic', color: 'var(--color-text-muted)', lineHeight: 1.5 }}>
+                                <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', fontStyle: 'italic', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
                                     {instr.description}
                                 </p>
                             </div>

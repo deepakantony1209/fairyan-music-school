@@ -6,9 +6,10 @@ import { EXPERIENCE } from '@/data/content';
 import { fadeUp, staggerContainer, scaleIn } from '@/lib/motion';
 
 const pillarImages: Record<string, string> = {
+    'Online & In-Centre Classes': 'https://images.pexels.com/photos/14959142/pexels-photo-14959142.jpeg?auto=compress&cs=tinysrgb&w=600&h=340&dpr=1',
+    'Trinity London Grade Exams': '/trinity-fairyan.jpg',
     'Student Bands': 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=340&fit=crop',
     'Live Events': 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=340&fit=crop',
-    'Digital Portfolio': 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=340&fit=crop',
     '25 Years of Alumni': 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&h=340&fit=crop',
 };
 

@@ -85,13 +85,33 @@ export default function SummerSection() {
                     Summer <em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>Intensives</em> 2026
                 </motion.h2>
 
-                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-8 max-w-lg" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.7 }}>
+                <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-4 max-w-lg" style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--color-text-sub)', lineHeight: 1.7 }}>
                     {SUMMER.subtitle}
                 </motion.p>
 
+                {/* Start date badge + parent hook */}
+                <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-8 flex flex-wrap items-center gap-4">
+                    <span style={{
+                        fontFamily: 'var(--font-ui)',
+                        fontSize: '12px',
+                        fontWeight: 700,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        background: 'var(--color-gold)',
+                        color: 'var(--color-midnight)',
+                        padding: '6px 14px',
+                        borderRadius: '4px',
+                    }}>
+                        Starts {SUMMER.startDate}
+                    </span>
+                    <span style={{ fontFamily: 'var(--font-ui)', fontSize: '13px', color: 'var(--color-gold)', fontStyle: 'italic' }}>
+                        {SUMMER.parentHook}
+                    </span>
+                </motion.div>
+
                 {/* Countdown */}
                 <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="mb-10">
-                    <CountdownTimer targetDate="2026-06-01T00:00:00" />
+                    <CountdownTimer targetDate="2026-04-17T00:00:00" />
                 </motion.div>
 
                 {/* Cards */}
