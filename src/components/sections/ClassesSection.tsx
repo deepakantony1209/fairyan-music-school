@@ -96,11 +96,14 @@ export default function ClassesSection() {
                             {/* CTA — full page link */}
                             <Link
                                 href={card.href}
-                                aria-label={`Learn more about ${card.headline}`}
                                 className="inline-flex items-center gap-2 rounded-sm px-5 py-2.5 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                                 style={{ fontFamily: 'var(--font-ui)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', background: 'var(--color-gold)', color: 'var(--color-midnight)' }}
                             >
                                 Learn More
+                                {/* visually hidden text for SEO & screen readers */}
+                                <span style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', borderWidth: 0 }}>
+                                    — {card.label}
+                                </span>
                                 <ArrowRight size={12} weight="bold" />
                             </Link>
                         </motion.div>
