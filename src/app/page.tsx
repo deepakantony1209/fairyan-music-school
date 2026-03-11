@@ -1,15 +1,18 @@
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppFloat from '@/components/layout/WhatsAppFloat';
-import HeroSection from '@/components/sections/HeroSection';
-import PathwaysSection from '@/components/sections/PathwaysSection';
-import InstrumentsSection from '@/components/sections/InstrumentsSection';
-import ClassesSection from '@/components/sections/ClassesSection';
-import SummerSection from '@/components/sections/SummerSection';
-import ExperienceSection from '@/components/sections/ExperienceSection';
-import GallerySection from '@/components/sections/GallerySection';
-import DirectorSection from '@/components/sections/DirectorSection';
-import EnrollSection from '@/components/sections/EnrollSection';
+import HeroSection from '@/components/sections/HeroSection'; // eager — LCP critical
+
+// Defer all below-the-fold sections so Framer Motion is not in the initial bundle
+const PathwaysSection    = dynamic(() => import('@/components/sections/PathwaysSection'));
+const InstrumentsSection = dynamic(() => import('@/components/sections/InstrumentsSection'));
+const ClassesSection     = dynamic(() => import('@/components/sections/ClassesSection'));
+const SummerSection      = dynamic(() => import('@/components/sections/SummerSection'));
+const ExperienceSection  = dynamic(() => import('@/components/sections/ExperienceSection'));
+const GallerySection     = dynamic(() => import('@/components/sections/GallerySection'));
+const DirectorSection    = dynamic(() => import('@/components/sections/DirectorSection'));
+const EnrollSection      = dynamic(() => import('@/components/sections/EnrollSection'));
 
 export default function Home() {
   return (
