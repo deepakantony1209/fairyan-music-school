@@ -1,11 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { ArrowRight } from '@phosphor-icons/react';
 import { HERO } from '@/data/content';
-import { fadeUp, staggerContainer, staggerChild } from '@/lib/motion';
 
+/**
+ * HeroSection — intentionally uses NO Framer Motion.
+ * Content is rendered visible immediately for best Speed Index / LCP.
+ * CSS keyframe animations provide the subtle entrance effect without
+ * blocking the initial paint.
+ */
 export default function HeroSection() {
     return (
         <section
@@ -20,6 +24,7 @@ export default function HeroSection() {
                 alt=""
                 fill
                 priority
+                fetchPriority="high"
                 className="object-cover object-center"
                 sizes="100vw"
                 quality={40}
@@ -34,15 +39,10 @@ export default function HeroSection() {
             <div className="pointer-events-none absolute -left-[200px] -top-[200px] h-[600px] w-[600px] rounded-full opacity-40 blur-[90px]" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%)' }} />
             <div className="animate-float pointer-events-none absolute -bottom-[150px] -right-[150px] h-[500px] w-[500px] rounded-full opacity-40 blur-[90px]" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%)' }} />
 
-            {/* Content */}
-            <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-                className="relative z-10 mx-auto max-w-[1280px] px-6 py-32 md:px-12"
-            >
+            {/* Content — immediately visible, CSS animation only */}
+            <div className="hero-content relative z-10 mx-auto max-w-[1280px] px-6 py-32 md:px-12">
                 {/* Badge Pills */}
-                <motion.div variants={staggerChild} className="mb-8 flex flex-wrap gap-3">
+                <div className="mb-8 flex flex-wrap gap-3">
                     {HERO.badges.map((badge) => (
                         <span
                             key={badge}
@@ -61,11 +61,10 @@ export default function HeroSection() {
                             {badge}
                         </span>
                     ))}
-                </motion.div>
+                </div>
 
                 {/* Headline */}
-                <motion.h1
-                    variants={fadeUp}
+                <h1
                     className="mb-5 max-w-3xl"
                     style={{
                         fontFamily: 'var(--font-display)',
@@ -78,11 +77,10 @@ export default function HeroSection() {
                 >
                     Where Music Becomes a{' '}
                     <em style={{ color: 'var(--color-gold)', fontStyle: 'italic' }}>Lifelong Story</em>
-                </motion.h1>
+                </h1>
 
                 {/* Subheadline */}
-                <motion.p
-                    variants={staggerChild}
+                <p
                     className="mb-10 max-w-lg"
                     style={{
                         fontFamily: 'var(--font-body)',
@@ -92,10 +90,10 @@ export default function HeroSection() {
                     }}
                 >
                     {HERO.subheadline}
-                </motion.p>
+                </p>
 
-                {/* CTAs */}
-                <motion.div variants={staggerChild} className="flex flex-wrap items-center gap-4">
+                {/* CTA */}
+                <div className="flex flex-wrap items-center gap-4">
                     <a
                         href="#enroll"
                         onClick={(e) => { e.preventDefault(); document.querySelector('#enroll')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -115,8 +113,8 @@ export default function HeroSection() {
                         {HERO.ctaPrimary}
                         <ArrowRight size={16} weight="bold" />
                     </a>
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
 
             {/* Scroll indicator */}
             <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2">
