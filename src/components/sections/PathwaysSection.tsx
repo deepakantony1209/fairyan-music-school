@@ -7,9 +7,9 @@ import { PATHWAYS } from '@/data/content';
 import { fadeUp, staggerContainer, scaleIn } from '@/lib/motion';
 
 const pathwayImages: Record<string, string> = {
-    'Juniors & Teens': 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=340&fit=crop',
-    'Adults & Professionals': 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&h=340&fit=crop',
-    'Lifelong Learners': 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=600&h=340&fit=crop',
+    'Juniors & Teens':       'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=225&fit=crop&q=75',
+    'Adults & Professionals': 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=225&fit=crop&q=75',
+    'Lifelong Learners':     'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=400&h=225&fit=crop&q=75',
 };
 
 export default function PathwaysSection() {
@@ -81,9 +81,9 @@ export default function PathwaysSection() {
                                     alt={card.title}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                                     loading="lazy"
-                                    quality={75}
+                                    quality={70}
                                 />
                                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, var(--color-surface-2) 5%, transparent 70%)' }} />
                             </div>

@@ -39,9 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Preconnect to critical third-party origins for LCP improvement */}
-        <link rel="preconnect" href="https://www.googleapis.com" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
+        {/* Preconnect to critical third-party origins */}
+        <link rel="preconnect" href="https://www.googleapis.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
         <link rel="dns-prefetch" href="https://images.pexels.com" />
       </head>
