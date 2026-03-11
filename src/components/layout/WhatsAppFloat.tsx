@@ -14,10 +14,10 @@ export default function WhatsAppFloat() {
             className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-float"
             style={{
                 background: 'var(--color-whatsapp)',
-                color: 'white',
+                color: '#0A2F14',
                 fontFamily: 'var(--font-ui)',
                 fontSize: '12px',
-                fontWeight: 600,
+                fontWeight: 700,
                 letterSpacing: '0.08em',
                 boxShadow: '0 4px 20px rgba(37,211,102,0.35)',
             }}
