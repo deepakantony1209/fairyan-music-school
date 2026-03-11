@@ -15,6 +15,8 @@ export default function Footer() {
                     <img
                         src="/logo-horizontal.svg"
                         alt="Fairyan Music School"
+                        width={180}
+                        height={40}
                         className="mb-4 h-10 w-auto logo-adaptive"
                     />
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-text-sub)', lineHeight: 1.7 }}>

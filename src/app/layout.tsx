@@ -38,6 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preconnect to critical third-party origins for LCP improvement */}
+        <link rel="preconnect" href="https://www.googleapis.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://images.pexels.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
+      </head>
       <body className="antialiased overflow-x-hidden" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
@@ -46,3 +53,4 @@ export default function RootLayout({
     </html>
   );
 }
+

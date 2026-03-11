@@ -65,6 +65,8 @@ export default function Navbar() {
                         <img
                             src="/logo-horizontal.svg"
                             alt="Fairyan Music School"
+                            width={180}
+                            height={36}
                             className="h-8 w-auto md:h-9 logo-adaptive transition-all duration-400"
                         />
                     </button>
